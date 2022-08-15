@@ -13,7 +13,8 @@ namespace EmpWageComputationProb
             //because method is non static
 
             EmployeeWage emp = new EmployeeWage();
-            emp.EmpWageTotalWorkingDays();
+            emp.ComputeEmpWage();
+            
         }
     }
 }
