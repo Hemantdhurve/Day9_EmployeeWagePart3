@@ -8,12 +8,12 @@ namespace EmpWageComputationProb
         {
             Console.WriteLine("Welcome to Employee Wage Computation Problem Part 3");
 
-            Console.WriteLine("Output to get Daily Wage of Employee is Part time or Full time using Switch case :");
+            Console.WriteLine("Output of Total Employee wage for a Month  :");
             //Creating Object of the class to call in Main method
             //because method is non static
 
             EmployeeWage emp = new EmployeeWage();
-            emp.EmpWageSwitchForMonth();
+            emp.EmpWageTotalWorkingDays();
         }
     }
 }
