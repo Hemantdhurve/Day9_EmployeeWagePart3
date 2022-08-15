@@ -13,12 +13,9 @@ namespace EmpWageComputationProb
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         public const int IS_ABSENT = 0;
-        public const int Emp_Rate_Per_Hr = 20;
-        public const int Number_Of_Working_Days = 20;
-        public const int Max_Hr_In_Month = 100;
        
         //Method is return type so it must return value
-        public int ComputeEmpWage()
+        public int computeEmpWage(string company, int Emp_Rate_Per_Hr, int Number_Of_Working_Days, int Max_Hr_In_Month)
         {
             int empHrs = 0;
             int empWage = 0;
@@ -49,9 +46,9 @@ namespace EmpWageComputationProb
                 totalEmpHrs += empHrs;
 
                 Console.WriteLine("Day " + totalWorkingDays + " : " + "Emp Hr: " + empHrs);
-                empWage = Emp_Rate_Per_Hr * empHrs;
-                totalEmpWage += empWage;
+   
             }
+            totalEmpWage = Emp_Rate_Per_Hr * totalEmpHrs;
             Console.WriteLine("Total EmpWage is :" + totalEmpWage);
             return totalEmpWage;
             
