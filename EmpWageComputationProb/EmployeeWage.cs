@@ -6,16 +6,28 @@ using System.Threading.Tasks;
 
 namespace EmpWageComputationProb
 {
-    public class EmployeeWage
-    {
-        //When using switch case define constants in class
+    //When using switch case define constants in class
 
+    public class EmpWageBuilder
+    {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         public const int IS_ABSENT = 0;
-       
+
+        private string company;
+        private int Emp_Rate_Per_Hr;
+        private int Number_Of_Working_Days;
+        private int Max_Hr_In_Month;
+        private int totalEmpWage;
+        public EmpWageBuilder(string company, int Emp_Rate_Per_Hr, int Number_Of_Working_Days, int Max_Hr_In_Month)
+        {
+            this.company = company;
+            this.Emp_Rate_Per_Hr = Emp_Rate_Per_Hr;
+            this.Number_Of_Working_Days = Number_Of_Working_Days;
+            this.Max_Hr_In_Month = Max_Hr_In_Month;
+        }
         //Method is return type so it must return value
-        public int computeEmpWage(string company, int Emp_Rate_Per_Hr, int Number_Of_Working_Days, int Max_Hr_In_Month)
+        public void computeEmpWage()
         {
             int empHrs = 0;
             int empWage = 0;
@@ -46,13 +58,14 @@ namespace EmpWageComputationProb
                 totalEmpHrs += empHrs;
 
                 Console.WriteLine("Day " + totalWorkingDays + " : " + "Emp Hr: " + empHrs);
-   
+
             }
             totalEmpWage = Emp_Rate_Per_Hr * totalEmpHrs;
-            Console.WriteLine("Total EmpWage is :" + totalEmpWage);
-            return totalEmpWage;
-            
+            Console.WriteLine("Total EmpWage for company :" + company + "is " + totalEmpWage);
+        }
+        public string toString()
+        {
+            return "Total EMPWAge for Company :" + company + "is " + totalEmpWage;
         }
     }
-    
 }
