@@ -9,6 +9,7 @@ namespace EmpWageComputationProb
             Console.WriteLine("Welcome to Employee Wage Computation Problem Part 4");
 
             Console.WriteLine("Output of Employee wage for Multiple Company Using Interface Approach :");
+
             //Creating Object of the class to call in Main method
             //because method is non static
 
@@ -16,7 +17,6 @@ namespace EmpWageComputationProb
             builder.addCompanyEmpWage("Dmart", 20, 2, 10);
             builder.addCompanyEmpWage("Reliance", 10, 4, 20);
             builder.computeEmpWage();
-
 
         }
     }
